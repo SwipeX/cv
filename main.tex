@@ -1,0 +1,123 @@
+%%%%%%%%%%%%%%%%%
+% This is an example CV created using altacv.cls (v1.1, 21 November 2016) written by
+% LianTze Lim (liantze@gmail.com), based on the 
+% Cv created by BusinessInsider at http://www.businessinsider.my/a-sample-resume-for-marissa-mayer-2016-7/?r=US&IR=T
+% 
+%% It may be distributed and/or modified under the
+%% conditions of the LaTeX Project Public License, either version 1.3
+%% of this license or (at your option) any later version.
+%% The latest version of this license is in
+%%    http://www.latex-project.org/lppl.txt
+%% and version 1.3 or later is part of all distributions of LaTeX
+%% version 2003/12/01 or later.
+%%%%%%%%%%%%%%%%
+
+%% If you want to use \orcid or the
+%% academicons icons, add "academicons"
+%% to the \documentclass options. 
+%% Then compile with XeLaTeX or LuaLaTeX.
+% \documentclass[10pt,a4paper,academicons]{altacv}
+\documentclass[10pt,a4paper]{altacv}
+
+%% AltaCV uses the fontawesome and academicon fonts
+%% and packages. 
+%% See texdoc.net/pkg/fontawecome and http://texdoc.net/pkg/academicons for full list of symbols.
+%% When using the "academicons" option,
+%% Compile with LuaLaTeX for best results. If you
+%% want to use XeLaTeX, you may need to install
+%% Academicons.ttf in your operating system's font %% folder.
+
+
+% Change the page layout if you need to
+\geometry{left=1cm,right=9cm,marginparwidth=6.8cm,marginparsep=1.2cm,top=1cm,bottom=1cm}
+
+% Change the font if you want to.
+
+% If using pdflatex:
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[default]{lato}
+
+% If using xelatex or lualatex:
+% \setmainfont{Lato}
+
+% Change the colours if you want to
+\definecolor{VividPurple}{HTML}{1894eb}
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{666666}
+\colorlet{heading}{VividPurple}
+\colorlet{accent}{VividPurple}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+
+% Change the bullets for itemize and rating marker
+% for \cvskill if you want to
+\renewcommand{\itemmarker}{{\small\textbullet}}
+\renewcommand{\ratingmarker}{\faCircle}
+
+\begin{document}
+\name{Timothy Dekker}
+\tagline{Software Engineer}
+\personalinfo{%
+  % Not all of these are required!
+  % You can add your own with \printinfo{symbol}{detail}
+  \email{timdeka@gmail.com}
+  \location{Location: Elkton, Maryland}
+  \linkedin{linkedin.com/in/tim-dekker-3ba33b84/}    \github{github.com/swipex}
+  \phone{484-502-3948} 
+  
+  % I'm just making this up though.
+%   \orcid{orcid.org/0000-0000-0000-0000} % Obviously making this up too. If you want to use this field (and also other academicons symbols), add "academicons" option to \documentclass{altacv}
+}
+
+%% Make the header extend all the way to the right, if you want. Extend the right margin by 8cm (=6.8cm marginparwidth + 1.2cm marginparsep)
+\begin{adjustwidth}{}{-8cm}
+\makecvheader
+\end{adjustwidth}
+
+%% Provide the file name containing the sidebar contents as an optional parameter to \cvsection.
+%% You can always just use \marginpar{...} if you do
+%% not need to align the top of the contents to any
+%% \cvsection title in the "main" bar.
+\cvsection[page1sidebar]{Experience -- (9 years)}
+\cvevent{Software Developer → .NET (6yr 4 mo)}{Serv-I-Quip Inc.}{April 2016 -- Ongoing}{Downingtown, Pennsylvania}
+\begin{itemize}
+\item Designed and tested custom software for domains including HVAC, Automotive, and Appliance.
+\item Lead efforts for an internal library to communicate with PLC (LOGIX) device controllors over ENET/IP.
+\end{itemize}
+\divider
+
+\cvevent{Software Developer → Java (3yr 4 mo)}{Dequeue Ltd.}{Feb 2012 -- June 2015}{Remote, London, UK}
+\begin{itemize}
+\item Collaborated with users to develop scripts and macros for common tasks. 
+\item Developed full stack solution for a centralized delivery mechanism to end users.
+\item Implemented data aggregation service to update users of progress remotely.
+\item Integrated push notify, email, and forum as response vectors to customer issues. 
+\end{itemize}
+
+\cvsection{PROJECTS}
+\begin{itemize}
+
+\item \textbf{\textit{kt-updater}} : A JVM bytecode class deobfuscator and class analyzer written in Kotlin. Uses static definitions to predict relationships between class files. Provides an easy to use DSL, which has been tested against various JVM based games such as MineCraft and Runescape. (Link: \url{https://github.com/SwipeX/osrs.kt-updater}).
+
+\divider
+
+\item \textbf{\textit{PokeMate}} : A full-stack application (JavaFX + Javascript) that showcased the ability to automate a user playing Pokemon-GO; communicating with the protobuf API (which has since been replaced). The interface features a live-view leaflet map with location tracking, along with surrounding pokemon displayed in the area. (Link: \url{https://github.com/SwipeX/PokeMate}).
+
+\divider
+
+\item \textbf{\textit{Seating Chart}} : ASP.NET project to show the feasibility of creating a web-based seating chart application. In a production environment, this would pull data from various sources and aggregate it to find where employees are located in a typical multiple-floor building. (Link: \url{https://github.com/CISC-475-Team-2})
+
+\divider
+
+\item \textbf{\textit{MIPS Assembler}} : An Assembler written in C\# that digests MIPS assembly instructions and provides a user interface to track/edit register values, step, and debug through programs.
+(Link: \url{https://github.com/SwipeX/Assembler})
+\divider
+
+\item \textbf{\textit{Page Rank}} : A smaller project written in C that uses OpenMP to process Google's page ranking algorithm. The intention of writing this code was to demonstrate the speed up achieved through multi-threading, specifically by offloading a portion of work via GPU. (Link: \url{https://github.com/SwipeX/page-rank})
+\end{itemize}
+
+\clearpage
+
+
+\end{document}
